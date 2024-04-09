@@ -19,5 +19,6 @@ func main() {
 	routers.InitRouters(router)
 
 	// 启动服务
+	router.Run(":8080")
 
 }

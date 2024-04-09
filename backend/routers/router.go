@@ -16,9 +16,5 @@ func InitRouters(router *gin.Engine) error {
 	if err != nil {
 		return err
 	}
-	err = router.Run(":8080")
-	if err != nil {
-		return err
-	}
 	return err
 }

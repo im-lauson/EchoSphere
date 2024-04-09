@@ -6,3 +6,7 @@ type Cartoon struct {
 	Description string `json:"description"`
 	Image       string `json:"image"`
 }
+
+func (cartoon *Cartoon) TableName() string {
+	return "cartoon_tencent"
+}
