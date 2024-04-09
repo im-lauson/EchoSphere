@@ -5,16 +5,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func InitRouters(router *gin.Engine) error {
-	var err error
+func InitRouters(router *gin.Engine) {
 
 	CartoonRouter := router.Group("/cartoon")
 	{
-		CartoonRouter.GET("/", controllers.GetCartoon)
+		CartoonRouter.Any("/", controllers.GetCartoon)
 	}
-	err = router.SetTrustedProxies([]string{"127.0.0.1:7890"})
-	if err != nil {
-		return err
-	}
-	return err
+	//router.SetTrustedProxies([]string{"127.0.0.1:7890"})
+
 }
