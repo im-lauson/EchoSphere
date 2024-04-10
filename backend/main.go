@@ -11,7 +11,7 @@ func main() {
 	InitConfig := config.InitConfig{}
 	InitConfig.InitLogger()
 	InitConfig.InitDB()
-	InitConfig.InitRedis()
+	//	InitConfig.InitRedis()
 	//
 	//// 初始化GIN引擎
 	router := gin.Default()
